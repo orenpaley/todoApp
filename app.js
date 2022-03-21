@@ -9,7 +9,11 @@ let localTodos = JSON.parse(localStorage.getItem("savedTodoList"));
 let merged = { ...savedTodo, ...localTodos };
 
 //check if no todos, initialize default instructions
-if (Object.keys(localTodos).length === 0) {
+if (localStorage.length === 0) {
+  let line1 = document.createElement("li");
+  let line2 = document.createElement("li");
+  let line3 = document.createElement("li");
+} else if (Object.keys(localTodos).length < 1) {
   let line1 = document.createElement("li");
   let line2 = document.createElement("li");
   let line3 = document.createElement("li");
